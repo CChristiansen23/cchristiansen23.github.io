@@ -37,8 +37,7 @@ nav a {
     color: white;
 }
 nav a:hover {
-    background: #03afff;
-    color: #1d1d1d;
+    color: #bcbcbc;
 }
 nav .header-home {
     margin-right: auto;
@@ -112,13 +111,27 @@ nav .header-home {
 .featured-button button {
     border: none;
     color: white;
-    background: #1d1d1d;
+    background: #39373c;
     padding: 1rem 2rem;
     border-radius: 2rem;
 }
 .featured-button button:hover {
-    background: #03afff;
+    background: #bababa;
     color: #1d1d1d;
+    cursor: pointer;
+}
+.latest-content > a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+.latest-content > a::after {
+    content: ">";
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 0.5rem;
+}
+.latest-content > a:hover::after {
+    opacity: 1;
 }
 @media (min-width: 768px) {
     .featured {
