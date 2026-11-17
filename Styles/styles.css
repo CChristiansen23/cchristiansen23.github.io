@@ -120,19 +120,7 @@ nav .header-home {
     color: #1d1d1d;
     cursor: pointer;
 }
-.latest-content > a {
-    text-decoration: none;
-    color: #1d1d1d;
-}
-.latest-content > a::after {
-    content: ">";
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    margin-left: 0.5rem;
-}
-.latest-content > a:hover::after {
-    opacity: 1;
-}
+
 @media (min-width: 768px) {
     .featured {
         display: flex;
@@ -191,6 +179,125 @@ nav .header-home {
 .latest-content > a {
     margin-top: auto;
 }
+.latest-content > a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+.latest-content > a::after {
+    content: ">";
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 0.5rem;
+}
+.latest-content > a:hover::after {
+    opacity: 1;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+
+/* BENTO GRID SECTION */
+.bento-grid-container h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+p {
+    font-size: 1.2rem;
+}
+.bento-grid-container {
+    padding: 3rem 0;
+}
+.bento-title {
+    margin-bottom: 1rem;
+}
+.bento-grid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "html" "css" "js" "ws" "git" ;
+
+    @media (width >= 40rem) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+                "html css"
+                "js css"
+                "js ws"
+                "git git"
+    }
+    @media (width >= 55rem) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+                "html css css"
+                "html css css"
+                "html ws git"
+                "html ws js"
+    }
+}
+.black {
+    --color: hsl(0 0% 0%);
+    --color-from: hsl(0 0% 88%);
+    --color-to: hsl(0 0% 39%);
+}
+.orange {
+    --color: hsl(0 0% 100%);
+    --color-from: hsl(30 87% 51%);
+    --color-to: hsl(32 86% 27%);
+}
+
+.green {
+    --color: hsl(0 0% 100%);
+    --color-from: hsl(104 44% 45%);
+    --color-to: hsl(104 48% 24%);
+}
+
+.red {
+    --color: hsl(0 0% 100%);
+    --color-from: hsl(0 71% 47%);
+    --color-to: hsl(0 72% 22%);
+}
+
+.blue {
+    --color: hsl(0 0% 100%);
+    --color-from: hsl(212 63% 51%);
+    --color-to: hsl(213 65% 24%);
+}
+.bento1 {
+    grid-area: html;
+}
+.bento2 {
+    grid-area: css;
+}
+.bento3 {
+    grid-area: js;
+}
+.bento4 {
+    grid-area: ws;
+}
+.bento5 {
+    grid-area: git;
+}
+.bento {
+    background-color: #f6f6f6;
+    color: var(--color);
+    border-radius: 0.5rem;
+    /*border: 6px solid var(--color);*/
+    padding: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to bottom right, var(--color-from), var(--color-to));
+}
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 footer {
